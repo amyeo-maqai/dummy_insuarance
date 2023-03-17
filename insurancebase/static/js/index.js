@@ -13,7 +13,7 @@ let postFile=async (event)=> {
   };
 
   try {
-    const response=await fetch('http://3.139.167.247:5000/fileupload/', options)
+    const response=await fetch('http://3.111.33.73:8000/fileupload/', options)
       .then(response => response.json())
       .then(data => {
         console.log(typeof data)
