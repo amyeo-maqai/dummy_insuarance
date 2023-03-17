@@ -1,0 +1,13 @@
+.fileupload-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+}
+.form-container{
+    border: 3px gray solid;
+    font-family: 'Times New Roman', Times, serif;
+}
+.output-message{
+    color:green;
+}

@@ -12,18 +12,17 @@ cols_to_delete_due_to_missing_data = ['Insurance_History_5',
                                       'Family_Hist_2', 'Family_Hist_3', 'Family_Hist_5',
                                       'Medical_History_10', 'Medical_History_15', 'Medical_History_24', 'Medical_History_32']
 
-@api_view(['post','get'])
 def test(request):
-    return Response("okay")
+    return render(request,"index.html")
 
 
 def load():
     mm_scaller = pickle.load(open(os.path.join(BASE_DIR,'model/MM_scaler.pkl'),'rb'))
     oh_encoder  = pickle.load(open(os.path.join(BASE_DIR,'model/OH_encoder.pkl'),'rb'))
     rf_model = pickle.load(open(os.path.join(BASE_DIR,'model/rf_model.pkl'),'rb'))
-    return le,mm_scaller,oh_encoder,rf_model
+    return mm_scaller,oh_encoder,rf_model
     
-le,mm_scaller,oh_enocder,rf_model = load()
+mm_scaller,oh_enocder,rf_model = load()
 
 class upl(APIView):
     parser_classes = (FormParser,MultiPartParser,FileUploadParser)
