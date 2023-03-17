@@ -90,6 +90,7 @@ coverage.xml
 # pyenv 
 .python-version
 *.zip
+*.pem
 
 # celery 
 celerybeat-schedule.* 
