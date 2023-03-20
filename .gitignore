@@ -9,6 +9,8 @@ media
 # dependencies
 /model
 *.pkl
+*.pem
+*.zip
 
 # Backup files # 
 *.bak 
